@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Iteration Statements</title>
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="bodystyle.css">
+	</head>
+	<body leftmargin='50' topmargin='50' style="background-image:url('looping.png');background-size:100% 16.75%;"marginwidth="0" marginheight="0">
+	<video id="bgvid" src="mixkit-ink-swirling-in-blue-tones-underwater-229-large.mp4" muted autoplay loop>
+	</video>
+<div class="content">
+		<h1 align='center'>Iteration Statements</h1>
+		<h3 align='center'>also known as looping statements</h3>
+		<p>Looping in programming languages is a feature which facilitates the execution of a set of instructions/functions repeatedly while some condition evaluates to true.
+		Java provides three ways for executing the loops. While all the ways provide similar basic functionality, they differ in their syntax and condition checking time.
+		</p>
+		There are three types of loops in Java:
+		<ul type='circle'>
+			<li><a href='#while'>while loop</a></li>
+			<li><a href='#for'>for loop</a></li>
+			<li><a href='#do-while'>do-while loop</a></li>
+		</ul>
+<br><hr><br>
+	<div>
+		<h2 align='center'><a id='while'>While Loop</a></h2>
+		<p>
+		A while loop is a control flow statement that allows code to be executed repeatedly based on a given Boolean condition. The while loop can be thought of as a repeating if statement.
+		</p>
+		<pre>
+	Syntax:
+		while (boolean condition){
+			loop statements...
+		}
+		</pre>
+		<b>Flowchart:</b>
+		<br>
+		<img src='Loop1.jpg' height='170' width='300'>
+		<br>
+		<ul>
+			<li>While loop starts with the checking of condition. If it evaluated to true, then the loop body statements are executed otherwise first statement following the loop is executed. For this reason it is also called Entry control loop</li>
+			<li>Once the condition is evaluated to true, the statements in the loop body are executed. Normally the statements contain an update value for the variable being processed for the next iteration.</li>
+			<li>When the condition becomes false, the loop terminates which marks the end of its life cycle.</li>
+		</ul>
+		<p>Java program to illustrate while loop :</p>
+		<pre>
+		class whileLoopDemo { 
+			public static void main(String args[]) { 
+				int x = 1; 
+				while (x <= 4) 		// Exit when x becomes greater than 4 
+				{ 
+					System.out.println("Value of x:" + x); 
+					x++; 			// Increment the value of x for 
+				} 					// next iteration 
+			} 
+		}
+		</pre>
+		<p>Output:</p>
+		<pre>
+	Value of x:1
+	Value of x:2
+	Value of x:3
+	Value of x:4
+		</pre>
+	</div>
+<br><hr><br>
+	<div>
+		<h2 align='center'><a id='for'>for loop</a></h2>
+		<p>
+		for loop provides a concise way of writing the loop structure. Unlike a while loop, a for statement consumes the initialization, condition and increment/decrement in one line thereby providing a shorter, easy to debug structure of looping.
+		</p>
+		<pre>
+	Syntax:
+		for (initialization condition; testing condition; increment/decrement){
+			statement(s)
+		}
+		</pre>
+		<b>Flowchart:</b>
+		<br>
+		<img src='Loop2.jpg' height='170' width='350'>
+		<br>
+		<ol>
+			<li><b>Initialization condition:</b> Here, we initialize the variable in use. It marks the start of a for loop. An already declared variable can be used or a variable can be declared, local to loop only.</li>
+			<li><b>Testing Condition:</b> It is used for testing the exit condition for a loop. It must return a boolean value. It is also an Entry Control Loop as the condition is checked prior to the execution of the loop statements.</li>
+			<li><b>Statement execution:</b> Once the condition is evaluated to true, the statements in the loop body are executed.</li>
+			<li><b>Increment/Decrement:</b> It is used for updating the variable for next iteration.</li>
+			<li><b>Loop termination:</b> When the condition becomes false, the loop terminates marking the end of its life cycle.</li>
+		</ol>
+		<p>Java program to illustrate for loop :</p>
+		<pre>
+		class forLoopDemo { 
+			public static void main(String args[]) {  
+			for (int x = 2; x <= 4; x++) 						// for loop begins when x=2
+				System.out.println("Value of x:" + x); 				// and runs till x <=4 
+			} 
+		} 
+		</pre>
+		<p>Output:</p>
+		<pre>
+	Value of x:2
+	Value of x:3
+	Value of x:4
+		</pre>
+	</div>
+<br><hr><br>
+	<div>
+		<h2 align='center'><a id='do-while'>Do-while loop</a></h2>
+		<p>
+		do while loop is similar to while loop with only difference that it checks for condition after executing the statements, and therefore is an example of Exit Control Loop.
+		</p>
+		<pre>
+	Syntax:
+		do {
+			statements..
+		}
+		while (condition);
+		</pre>
+		<b>Flowchart:</b>
+		<br>
+		<img src='Loop3.jpg' height='170' width='300'>
+		<br>
+		<ul>
+			<li>do while loop starts with the execution of the statement(s). There is no checking of any condition for the first time.</li>
+			<li>After the execution of the statements, and update of the variable value, the condition is checked for true or false value. If it is evaluated to true, next iteration of loop starts.</li>
+			<li>When the condition becomes false, the loop terminates which marks the end of its life cycle.</li>
+			<li>It is important to note that the do-while loop will execute its statements atleast once before any condition is checked, and therefore is an example of exit control loop.</li>
+		</ul>
+		<p>Java program to illustrate do-while loop :</p>
+		<pre>
+		class dowhileloopDemo { 
+			public static void main(String args[]) { 
+				int x = 21; 
+				do { 
+					System.out.println("Value of x:" + x); 			// The line will be printed even 
+					x++; 							// if the condition is false
+				} while (x < 20); 
+			} 
+		} 
+		</pre>
+		<p>Output:</p>
+		<pre>
+	Value of x: 21
+		</pre>
+	</div>
+<br><hr><br>
+	<div>
+		<h2>## ----- Important Note ----- ##<h2>
+		<h2>Infinite Loops</h2>
+		<p>One of the most common mistakes while implementing any sort of looping is that it may not ever exit, that is the loop runs for infinite time. This happens when the condition fails for some reason.</p>
+		For example,<br>
+		<pre>
+		public class LooppitfallsDemo { 
+			public static void main(String[] args) {   
+				for (int i = 5; i != 0; i -= 2) 				// infinite loop because condition is not apt 
+				{ 								// condition should have been i>0.
+					System.out.println(i); 
+				}
+			} 
+		} 
+		</pre>
+		Another example,<br>
+		<pre>
+		public class LooppitfallsDemo { 
+			public static void main(String[] args) {   
+				int x = 5; 
+				while (x == 5) 										
+				{ 								// infinite loop because update statement 
+					System.out.println("In the loop"); 			// is not provided. 
+				} 
+			} 
+		} 
+		</pre>
+	</div>
+	</div>
+	</body>
+</html>

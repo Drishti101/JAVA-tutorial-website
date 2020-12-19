@@ -1,0 +1,9 @@
+body
+{
+  opacity: 0;
+}
+
+body:hover
+{
+  opacity: 1;
+}

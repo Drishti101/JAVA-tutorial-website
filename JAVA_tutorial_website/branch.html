@@ -1,0 +1,102 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Branch Statements</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bodystyle.css">
+</head>
+
+<body style="background-image:url('branch.png');background-size:100% 40.45%;"marginwidth="0" marginheight="0">
+	<video id="bgvidw" src="Introducing Google Wind_HD.mp4" muted autoplay loop>
+	</video>
+<div class="content">
+    <div>
+        <h2>Branching Statements in Java</h2>
+        <p>
+            <ul>
+                <li>Java provides three branching statements break, continue and return.</li>
+                <li>Branching statements in Java are used to change the normal flow of execution based on some condition.</li>
+                <li>The return branching statement is used to explicitly return from a method.</li>
+                <li>break branching statement is used to break the loop and transfer control to the line immediate outside of loop.</li>
+                <li>continue branching statement is used to escape current execution and transfers control back to the start of the loop.</li>
+                <li>Java branching statements break and continue statements have two forms: the labeled form and the unlabeled form.</li>
+            </ul>
+        </p>
+    </div>
+    <div>
+        <h3>The break Statement</h3>
+        <p>The break statement has two forms: labeled and unlabeled. You saw the unlabeled form in the previous discussion of the switch statement. You can also use an unlabeled break to terminate a for, while, or do-while loop, as shown in the following BreakDemo program:</p>
+        <pre>
+            class BreakDemo {
+                public static void main(String[] args) {
+            
+                    int[] arrayOfInts = 
+                        { 32, 87, 3, 589,
+                          12, 1076, 2000,
+                          8, 622, 127 };
+                    int searchfor = 12;
+            
+                    int i;
+                    boolean foundIt = false;
+            
+                    for (i = 0; i < arrayOfInts.length; i++) {
+                        if (arrayOfInts[i] == searchfor) {
+                            foundIt = true;
+                            break;
+                        }
+                    }
+            
+                    if (foundIt) {
+                        System.out.println("Found " + searchfor + " at index " + i);
+                    } else {
+                        System.out.println(searchfor + " not in the array");
+                    }
+                }
+            }
+        </pre>
+        <br>
+        <p>This program searches for the number 12 in an array. The break statement, shown in boldface, terminates the for loop when that value is found. Control flow then transfers to the statement after the for loop. This program's output is: Found 12
+            at index 4</p>
+    </div>
+    <div>
+        <h3>The continue Statement</h3>
+        <p>The continue statement skips the current iteration of a for, while , or do-while loop. The unlabeled form skips to the end of the innermost loop's body and evaluates the boolean expression that controls the loop. The following program, ContinueDemo ,
+            steps through a String, counting the occurences of the letter "p". If the current character is not a p, the continue statement skips the rest of the loop and proceeds to the next character. If it is a "p", the program increments the letter
+            count.
+        </p>
+        <pre>class ContinueDemo {
+            public static void main(String[] args) {
+        
+                String searchMe = "peter piper picked a " + "peck of pickled peppers";
+                int max = searchMe.length();
+                int numPs = 0;
+        
+                for (int i = 0; i < max; i++) {
+                    // interested only in p's
+                    if (searchMe.charAt(i) != 'p')
+                        continue;
+        
+                    // process p's
+                    numPs++;
+                }
+                System.out.println("Found " + numPs + " p's in the string.");
+            }
+        }
+        Here is the output of this program:
+        Found 9 p's in the string.
+    </pre>
+    </div>
+    <div>
+        <h3>The return Statement</h3>
+        <p>The last of the branching statements is the return statement. The return statement exits from the current method, and control flow returns to where the method was invoked. The return statement has two forms: one that returns a value, and one that
+            doesn't. To return a value, simply put the value (or an expression that calculates the value) after the return keyword.</p>
+        <br>
+        <p>return ++count;<br> The data type of the returned value must match the type of the method's declared return value. When a method is declared void, use the form of return that doesn't return a value.
+            <br>return;</p>
+    </div>
+</div>
+</body>
+
+</html>

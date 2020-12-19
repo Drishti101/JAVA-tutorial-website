@@ -1,0 +1,120 @@
+<html>
+<head>
+	<title>Variables</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="bodystyle.css">
+</head>
+<body style="background-image:url('variable.png');background-size:100% 28.75%;"marginwidth="0" marginheight="0">
+	<video id="bgvid" src="mixkit-sky-through-a-plane-window-4368-large.mp4" muted autoplay loop>
+	</video>
+<div class="content">
+	<h1><center>VARIABLES</center></h1>
+<P>		In programming, a variable(identifiers) is a value that can change, depending on conditions or on information passed to the program. Typically, a program consists of instructions that tell the computer what to do and data that the program uses when it is running. The data consists of constants or fixed values that never change and variable values (which are usually initialized to "0" or some default value because the actual values will be supplied by a program's user).</P>
+<br>
+<p>		<b>Variables</b> are used to store information to be referenced and manipulated in a computer program. They also provide a way of labeling data with a descriptive name, so our programs can be understood more clearly by the reader and ourselves. It is helpful to think of variables as containers that hold information. Their sole purpose is to label and store data in memory. This data can then be used throughout your program.</p>
+<br>
+<p>		<b>In JAVA programming</b>, identifiers are also called variables.A variable is a named memory location, which contains a value.The value of a variable can change depending upon the cicumstances and problems in a program. A variable can posses a combination of letters without space.We can declare more than one variable of the same data type in a statement.</p>
+<b>Syntax:</b>(data type)(space)(variable name)
+<br>int m;
+<br>float p,q,r;
+<p>		A value assigned to a variable sets itself in the memory location named with the variable.If certain change is made due to an operatio, it is maintained in the same location.Thus, a variable can change its value</p>
+<b>EXAMPLE:</b>
+<h4>You declare a JavaScript variable with the var keyword:</h4>
+var carName;
+<br>
+<h4>To assign a value to the variable, use the equal sign:</h4>
+carName = "Volvo";
+<br>
+<h4>You can also assign a value to the variable when you declare it</h4>
+var carName = "Volvo";
+<p>		Variables are usually initialized to "0" or some default value because the actual values will be supplied by a program's user.</p>
+<b>Initializing a Variable:</b>
+<p>When you declare a variable, it contains a sort of garbage(Absurd value), which may create problem during execution of your program.You may not obtain proper result although, your program logic is correct.Under such circumstances, you need to initialize a variable.A variable may be initialized by assignig specific value to it.</p>
+<center>Initialization of a variable may take place in the following two ways:</center>
+<img src="initializationdiagram.jpg" alt="datatypesdiagram" width="90%" height="70%">
+Static Initialization:
+<p>		This process uses direct assignment of a variable with defined constant.The variable is initialized during its declaration(i.e. before its actual use in the programming logic).</p>
+<b>		for example:</b>
+<table border="1" align="center"><tr>
+	       <th>DATA TYPES</th>
+	       <th>Declaration</th>
+	       <th>Static Initialization</th>
+	   </tr>
+	   <tr align="left">
+	   	   <th>Integer</th>
+	   	   <th>int a;</th>
+	   	   <th>a = 0;</th>
+	   </tr>
+	   <tr align="left">
+	   	   <th>Float</th>
+	   	   <th>float;</th>
+	   	   <th>f = 0.00;</th>
+	   </tr>
+	   <tr align="left">
+	   	   <th>Double</th>
+	   	   <th>double d;</th>
+	   	   <th>d = 0.00;</th>
+	   </tr>
+	   <tr align="left">
+	   	   <th>Character</th>
+	   	   <th>char c;</th>
+	   	   <th>c = "ohm";</th>
+	   </tr>
+	   <tr align="left">
+	   	   <th>String</th>
+	   	   <th>String s;</th>
+	   	   <th>s = "HELLO WORLD"</th>
+	   </tr>
+	   <tr align="left">
+	   	   <th>Boolean</th>
+	   	   <th>boolean p;</th>
+	   	   <th>p = false;</th>
+	   </tr>
+</table>
+Dynamic Initialization:
+<p>		When a variable gets initialized azt run time i.e. during execution of program logic, it is termed as dynamic initialization.Under this situation,a variable is assigned with the outcome of any arithmetical or logical function.</p>
+<b>		for example:</b>
+<table border="1" align="center"><tr>
+	       <th>DATA TYPES</th>
+	       <th>Declaration</th>
+	       <th>Dynamic Initialization</th>
+	   </tr>
+	   <tr align="left">
+	   	   <th>Integer</th>
+	   	   <th>int a,b,c;</th>
+	   	   <th>c = a + b;</th>
+	   </tr>
+	   <tr align="left">
+	   	   <th>Float</th>
+	   	   <th>float p = 2.2,k = 4.22, f;</th>
+	   	   <th>f = p + k;</th>
+	   </tr>
+	   <tr align="left">
+	   	   <th>Double</th>
+	   	   <th>int a = 49;double d;</th>
+	   	   <th>d = 0.00;</th>
+	   </tr>
+	   <tr align="left">
+	   	   <th>String</th>
+	   	   <th>string st1,st2,st3;</th>
+	   	   <th>st3 = st1 + st2;</th>
+	   </tr>	   
+</table>
+  <h3>Rules for naming a Variable:</h3>
+<ul>
+  <li>A variable may have any number of characters.</li>
+  <li>It may contain alphabets, digits and underscore.</li>
+  <li>The underscore can be applied in between the characters to increase the length of a variable name.</li>
+  <li>Variable names should be meaningful which easily depict the logic.</li>
+</ul>
+ <h3>Reasons for a variable to be invalid:</h3>
+<ul>
+  <li>Variable name should not start with a digit or special character.</li>
+  <li>A variable name should not include a space in between its characters.</li>
+  <li>A digit should not be applied in between the characters of a variable name.</li>
+  <li>A variable name should not be a reserved/key word.</li>
+</ul>
+
+</div>
+</body>
+</html>

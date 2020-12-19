@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Selection Statements</title>
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="bodystyle.css">
+  </head>
+  <body style="background-image:url('Selection.png');background-size:100% 15%;" marginwidth="0" marginheight="0">
+	<video id="bgvid" src="stock-footage-automotive-engineer-working-on-electric-car-chassis-platform-using-tablet-computer-with-augmented.webm" muted autoplay loop>
+	</video>
+<div class="content">
+    <h1>Selection Statements in JAVA</h1>
+    <p>
+      Java provides selection statements that allow the program
+      to choose between alternative actions during execution.
+      The choice is based on criteria specified in the selection statement.
+      These selection statements are
+    </p>
+
+    <h2>if statement:</h2>
+    
+    The simple if statement has the following syntax: <br><pre>
+    if (conditional statement)
+    {
+      // Executes this block if
+      // condition is true
+    }
+    </pre>
+    It is used to decide whether an action is to be performed or not,
+    based on a condition. The condition is specified by <b>conditional expression</b>
+    and the action to be performed is specified by <b>statement</b>.
+    Here, condition after evaluation will be either true or false.
+    if statement accepts boolean values – if the value is true then
+    it will execute the block of statements under it.<br><br>
+
+    If we do not provide the curly braces ‘{‘ and ‘}’ after if(condition)
+    then by default if statement will consider the immediate one statement to be
+    inside its block.<br><br>
+
+    <img src="if.jpg" height="300" width="200" >
+    <br><br>
+
+    <h2>if-else statement:</h2>
+    
+    The if-else statement has the following syntax: <br><pre>
+    if (condition)
+    {
+      // Executes this block if
+      // condition is true
+    }
+    else
+    {
+      // Executes this block if
+      // condition is false
+    }</pre>
+
+    It is used to decide between two actions, based on a condition.
+  <br><br>
+    The <b>conditional expression</b> is evaluated first. If its value is true,
+    then <statement1> (the if block) is executed and execution continues with the
+    rest of the program. If the value is false, then <b>statement2</b> (the else block)
+    is executed and execution continues with the rest of the program. In other words,
+    one of two mutually exclusive actions is performed. The else clause is optional;
+    if omitted, the construct reduces to the simple if statement.<br><br>
+
+    <h2>if-else statement using ternary operator:</h2>
+
+    The if-else statement using ternary operator has the following syntax: <br>
+
+    You can replace the following code
+    <pre>
+    if (expression) {
+       number = 10;
+    }
+    else {
+       number = -10;
+    }
+
+  <b>  with</b>
+
+    number = (expression) ? expressionTrue : expressinFalse;
+    </pre>
+
+    <img src="if-else.jpg" height="300" width="200"><br><br>
+
+    <p>
+    <h2>nested-if statement:</h2>
+    A nested if is an if statement that is the target of another if or else. Nested
+    if statements means an if statement inside an if statement. Yes, java allows us
+    to nest if statements within if statements. i.e, we can place an if statement
+    inside another if statement. <br>
+  </p>
+    <pre>
+    if (condition1)
+    {
+     // Executes when condition1 is true
+     if (condition2)
+     {
+        // Executes when condition2 is true
+     }
+    }
+
+    <img src="nestedif.jpg" height="400" width="320">
+    </pre>
+
+    <h2>if-else-if ladder:</h2>
+    <p>
+    Here, a user can decide among multiple options.The if statements are executed
+    from the top down. As soon as one of the conditions controlling the if is true,
+    the statement associated with that if is executed, and the rest of the ladder is
+    bypassed. If none of the conditions is true, then the final else statement will
+    be executed. <br>
+  </p>
+  <pre>
+    if (condition)
+    {
+      //statement;
+    }
+    else if (condition)
+    {
+      //statement;
+    }
+    .
+    .
+    else
+    {
+      //statement;
+    }
+
+    <img src="ifelseif.jpg" height="400" width="300">
+    </pre>
+
+    <h2>switch-case:</h2>
+    <p>
+    The switch statement is a multi-way branch statement. It provides an easy way to
+    dispatch execution to different parts of code based on the value of the expression.
+    Basically, the expression can be byte, short, char, and int primitive data types.
+    Beginning with JDK7, it also works with enumerated types ( Enums in java), the
+    String class and Wrapper classes. <br>
+</p>
+  <pre>
+    switch (expression)
+    {
+      case value1:
+        //statement1;
+        break;
+      case value2:
+        //statement2;
+        break;
+      .
+      .
+      case valueN:
+        //statementN;
+        break;
+      default:
+        //statementDefault;
+    }
+  </pre>
+    The syntax of the switch statement comprises a switch expression followed by the
+    switch body, which is a block of statements. The type of the switch expression is
+    non-long integral (i.e., char, byte, short, or int). The statements in the switch
+    body can be labeled, defining entry points in the switch body where control can be
+    transferred depending on the value of the switch expression. The semantics of the
+    switch statement are as follows:
+<ul><li>The switch expression is evaluated first.</li>
+<li>The value of the switch expression is compared with the case labels. Control is transferred
+to the statement associated with the case label that is equal to the value of the switch
+expression. After execution of the associated statement, control falls through to the next
+statement unless appropriate action is taken.</li>
+<li>If no case label is equal to the value of the switch expression, the statement associated
+with the default label is executed.</li>
+</ul><br><br>
+
+    <img src="switchcase.jpg" height="400" width="300">
+
+    <h2>fall through:</h2>
+    <p>
+  The execution point of this code will jump to whichever case matches the
+  variable supplied to the switch statement. But, if the break statements
+  are omitted from the cases <br>
+  </p>
+  <pre>
+    switch(variable) {
+    case 1:
+        //do something
+    case 2:
+        //do something
+    default:
+        //do something
+      }
+    </pre>
+    <P>then all of the cases that come after the desired case will
+      additionally be executed, because there was no instruction to stop.
+      For example, say variable is equal to 1. In the first code example,
+      only case 1 will execute. In the second code example, cases 1, 2,
+      and the default case will execute because of the lack of break
+      statements.
+
+      <br><br>This additional execution of cases is the "fall through" behavior.
+</p>
+
+  </div>
+  </body>
+</html>

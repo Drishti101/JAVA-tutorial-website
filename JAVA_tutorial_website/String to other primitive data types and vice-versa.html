@@ -1,0 +1,122 @@
+<html>
+<head>
+<title> String to other primitive data types and vice-versa </title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="bodystyle.css">
+</head>
+<body style="background-image:url('string.png');background-size:100% 20.6%;"marginwidth="0" marginheight="0">
+	<video id="bgvids" src="World - 2.mp4" muted autoplay loop>
+	</video>
+<div class="content">
+<h1>Conversion from string to primitive types</h1>
+<P>Wrapper classes can be used to convert from string to primitive types by using the functions in the following ways:</P>
+<h2>String to Integer type data</h2>
+<P>Syntax:
+<pre>integer variable = Integer.parseInt(String);
+integer variable = Integer.valueOf(String);</pre>
+For example,
+<pre>int n;String s="24";
+n=Integer.parseInt(s);</pre>
+Or
+<pre>n=Integer.valueOf(s);</pre>
+Thus, the variable and results n in 24 (without quotes).</P>
+
+<h2>String to Long type data</h2>
+<P>Syntax:
+<pre>long variable = Long.parseLong(String);
+long variable = Long.valueOf(String);</pre>
+For example,
+<pre>long n;String s="2465783";
+n=Long.parseLong(s);</pre>
+or
+<pre>n=Long.valueOf(s);</pre>
+Thus, the variable and results n in 24657834 (without quotes).</P>
+
+<h2>String to Float type data</h2>
+<P>Syntax:
+<pre>float variable = Float.parseFloat(String);
+float variable = Float.valueOf(String);</pre>
+For example,
+<pre>Float n;String s="24.35";
+n=Float.parseFloat(s);</pre>
+Or
+<pre>n=Float.valueOf(s);</pre>
+Thus, the variable and results n in 24.35 (without quotes).</P>
+
+<h2>String to Double type data</h2>
+<P>Syntax:
+<pre>double variable = Double.parseDouble(String);
+double variable = Double.valueOf(String);</pre>
+For example,
+<pre>Double n;String s="24.315467398";
+n=Double.parseDouble(s);</pre>
+Or
+<pre>n=Double.valueOf(s);</pre>
+Thus, the variable and results n in 24.315467398 (without quotes).</P>
+
+<P>Note: Conversion from string to primitive type data is only possible when it contains only number (a character or a digit). If these functions if tried with alphanumeric string then it throws NullFormatException. It must be kept in mind that value of function is available in Java 1.5 version and student value of function year come period system must have Java version 1.5 or more.</P>
+
+<h1>Conversion from primitive type data to string</h1>
+<P>A primitive type data can also get converted into string type in order to apply string functions on the digits of the number. This process is as shown below:</P>
+<h2>Integer type data to string type</h2>
+<P>Syntax:
+<pre>String variable = Integer.toString(int);</pre>
+For example,
+<pre>int n=24; String s;
+s = Integer.toString(n);</pre>
+Here, an integer type number (n=24), gets converted to a string. Hence, s = "24". Now, any mathematical operation with the variable 's' cannot be performed.</P>
+
+<h2>Long type data to string type</h2>
+<P>Syntax:
+<pre>String variable = Long.toString(long);</pre>
+For example,
+<pre>long n=246935; String s;
+s = Long.toString(n);</pre>
+Here, an long type number (n=246935), gets converted to a string. Hence, s = "246935".</P>
+
+<h2>Float type data to string type</h2>
+<P>Syntax:
+<pre>String variable = Float.toString(float);</pre>
+For example,
+<pre>float n=24.35; String s;
+s = Float.toString(n);</pre>
+Here, an float type number (n=24.35), gets converted to a string. Hence, s = "24.35".</P>
+
+<h2>Double type data to string type</h2>
+<P>Syntax:
+<pre>String variable = Double.toString(double);</pre>
+For example,
+<pre>double n=24.3452781; String s;
+s = Double.toString(n);</pre>
+Here, an double type number (n=24.3452781), gets converted to a string. Hence, s = "24.3452781".</P>
+
+<P>Example:</br></br>Program in Java to enter a number and display the sum of the original number and the reversed number. For example, original number = 345 then reversed number = 543. Hence, the sum = 888.
+
+<pre>import java.io.*;
+public class sum
+{
+	public static void main(String args[])throws IOException
+	{
+		InputStreamReader read = new InputStreamReader(System.in);
+		BufferedReader in = new BufferedReader(read);
+		int a, m, n, i, t = 0;
+		int m = 0;
+		String w, p = "";
+		char c;
+		System.out.println ("Enter a number");
+		n = Integer.parseInt(in.readLine());
+		w = Integer.toString(n);
+		a = w.length();
+		for(i=0;i<a><</a>a;i++)
+		{
+			c = w.charAt(i);
+			p = c+p;
+		}
+		t = Integer.parseInt(p);
+		m = n+t;
+		System.out.println("The sum of the original number and the reversed number ="+m);
+	}
+}</pre></P>
+</div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+#hvid
+{
+	position: fixed;
+	z-index: -1;
+	right=0;
+	top: 0;
+	height: 720;
+	width: 1280;
+	min-width: 100%;
+	min-height: 100%;
+}
+
+body
+{
+  opacity: 0;
+}
+
+body:hover
+{
+  opacity: 1;
+}
